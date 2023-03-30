@@ -16,5 +16,17 @@
       </tr>
     </tbody>
   </table>
+  <hr>
+  <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+  <hr>
+  <h1>Reviews</h1>
+  <ul>
+    <%= @restaurant.reviews.each do |review| %>
+      <li><%= review.content %></li>
+      <li>Rating: <%= review.rating %></li>
+      <br>
+    <% end %>
+  </ul>
+  <hr>
   <%= link_to 'Back to all restaurants', restaurants_path  %>
 </div>
