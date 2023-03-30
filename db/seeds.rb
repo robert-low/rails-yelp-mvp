@@ -16,7 +16,7 @@ puts 'Creating new restaurants...'
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.cell_phone,
-    category: Faker::Restaurant.type
+    category: %w[chinese italian japanese french belgian].sample
   )
   puts "Restaurant: #{restaurant.id} created!"
 end
