@@ -22,8 +22,8 @@
   <h1>Reviews</h1>
   <ul>
     <%= @restaurant.reviews.each do |review| %>
-      <li><%= review.content %></li>
       <li>Rating: <%= review.rating %></li>
+      <li><%= review.content %></li>
       <br>
     <% end %>
   </ul>
